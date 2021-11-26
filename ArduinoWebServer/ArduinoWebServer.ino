@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 #include <SPI.h>
 #include <Ethernet.h>
 
+=======
+#include <LiquidCrystal_I2C.h>
+#include <SPI.h>
+#include <Ethernet.h>
+
+LiquidCrystal_I2C lcd(0x3F,16,2);  //
+
+>>>>>>> WebServer
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 IPAddress ip(192, 168, 1, 177);
 EthernetServer server(80);
@@ -14,6 +23,14 @@ void setup()
 
   Serial.print("server is at ");
   Serial.println(Ethernet.localIP());
+<<<<<<< HEAD
+=======
+  // Inicializar el LCD
+  lcd.init();
+  
+  //Encender la luz de fondo.
+  lcd.backlight();
+>>>>>>> WebServer
 }
 
 void loop()
@@ -77,6 +94,12 @@ void loop()
     }
 
     delay(1);
+<<<<<<< HEAD
     client.stop();
+=======
+    lcd.clear();
+    client.stop();
+    
+>>>>>>> WebServer
   }
 }
