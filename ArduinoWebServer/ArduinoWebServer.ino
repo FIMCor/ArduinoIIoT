@@ -4,8 +4,8 @@
 
 LiquidCrystal_I2C lcd(0x3F,16,2);  //
 
-byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-IPAddress ip(192, 168, 1, 177);
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x00 };
+IPAddress ip(192, 168, 8, 20);
 EthernetServer server(80);
 
 void setup()
